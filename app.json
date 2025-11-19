@@ -3,7 +3,7 @@
     "name": "kominote",
     "slug": "kominote",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
@@ -25,6 +25,21 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "L'application a besoin d'accéder à votre galerie pour vous permettre de joindre une photo à votre signalement.",
+          "cameraPermission": "L'application a besoin d'accéder à votre caméra pour vous permettre de prendre une photo pour votre signalement."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Kominote a besoin de votre position pour géolocaliser votre signalement."
+        }
+      ]
+    ]
   }
 }
